@@ -1,7 +1,6 @@
 import {
   Stage,
   game,
-  me,
   ColorLayer,
   BitmapText
 } from "melonjs/dist/melonjs.module.js";
@@ -21,10 +20,10 @@ class PlayScreen extends Stage {
         size: 4.0,
         textBaseline: "middle",
         textAlign: "center",
-        text: "Hello World5"
+        text: "Hello World7"
       })
     );
-    game.world.addChild(new PlayerEntity(0, 0, []));
+    game.world.addChild(new PlayerEntity(100, 100, []));
   }
 }
 

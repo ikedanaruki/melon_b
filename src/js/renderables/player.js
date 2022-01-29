@@ -6,18 +6,27 @@ class PlayerEntity extends me.Entity {
    * constructor
    */
   constructor(x, y, settings) {
-    var img = { width: 100, height: 100 };
+    var img = { width: 750, height: 192 };
     super(
       //me.game.viewport.width / 2 - img.width / 2,
       //me.game.viewport.height - img.height - 20,
-      200,
-      200,
+      x,
+      y,
       {
         image: me.loader.getImage("bear"),
         width: img.width,
-        height: img.height
+        height: img.height,
+        flamewidth: 150,
+        flameheight: 192
       }
     );
+    this.body.ignoreGravity = true;
+    this.renderable.addAnimation("stand", [2]);
+    this.renderable.setCurrentAnimation("stand");
+    //this.renderable.flamewidth = 150;
+    //this.renderable.flameheight = 192;
+    //this.renderable.offset.set(0, 0);
+    this.renderable.anchorPoint = new me.Vector2d(0, 0);
   }
 
   /**
