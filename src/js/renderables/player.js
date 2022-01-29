@@ -6,8 +6,6 @@ class PlayerEntity extends me.Entity {
    * constructor
    */
   constructor(x, y, settings) {
-    // call the parent constructor
-    //super(x, y, settings);
     var img = { width: 100, height: 100 };
     super(
       //me.game.viewport.width / 2 - img.width / 2,
