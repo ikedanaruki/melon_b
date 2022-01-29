@@ -1,18 +1,25 @@
-import { Entity, game} from "melonjs/dist/melonjs.module.js";
+import * as me from "melonjs/dist/melonjs.module.js";
+//import { Entity, game } from "melonjs/dist/melonjs.module.js";
 
-class PlayerEntity extends Entity {
+class PlayerEntity extends me.Entity {
   /**
    * constructor
    */
   constructor(x, y, settings) {
     // call the parent constructor
-    super(x, y, settings);
-    var img = { width: 33, height: 33 };
-    super(x, y, [
-    game.viewport.width / 2 - img.width / 2,
-    game.viewport.height - img.height - 20,
-    { image: game.me.loader.getImage("bear") }
-    ]);
+    //super(x, y, settings);
+    var img = { width: 100, height: 100 };
+    super(
+      //me.game.viewport.width / 2 - img.width / 2,
+      //me.game.viewport.height - img.height - 20,
+      200,
+      200,
+      {
+        image: me.loader.getImage("bear"),
+        width: img.width,
+        height: img.height
+      }
+    );
   }
 
   /**
