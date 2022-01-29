@@ -7,12 +7,11 @@ class PlayerEntity extends Entity {
   constructor(x, y, settings) {
     // call the parent constructor
     super(x, y, settings);
-    this.
     var img = { width: 33, height: 33 };
     super(x, y, [
     game.viewport.width / 2 - img.width / 2,
     game.viewport.height - img.height - 20,
-    { image: me.loader.getImage("bear") }
+    { image: game.me.loader.getImage("bear") }
     ]);
   }
 
